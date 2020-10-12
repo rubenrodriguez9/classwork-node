@@ -38,9 +38,9 @@ const server = http.createServer((req, res) => {
         const readStream = fs.createReadStream(__dirname + '/about.html') 
         readStream.pipe(res)
         
-    } else res.writeHead(404, {'Content-Type': 'error/html'})
+    } else {res.writeHead(404, {'Content-Type': 'text/html'})
     const readStream = fs.createReadStream(__dirname + '/error.html') 
-    readStream.pipe(res)
+    readStream.pipe(res)}
 
 })
 
